@@ -126,7 +126,7 @@ public class SpringSecurityLoginCommand implements LoginCommand, InitializingBea
     		if (request != null && response != null && !isPerClientAuthentication()) {
     			this.rememberMeServices.loginFail(request, response);
     		}
-    		throw ex;
+    		return null;
     	}
     }
 
